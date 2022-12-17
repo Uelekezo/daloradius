@@ -29,4 +29,4 @@ if (strpos($_SERVER['PHP_SELF'], '/library/googlemaps.php') !== false) {
 
 ?>
 
-<script src="//maps.google.com/maps?file=api&v=3&key=ABQIAAAAvDA1LFHpWKREw2gtHBYMbRSA7TeyclIs2Du2iixdj2Lkq9VI1xRmDifIqWHjs4ZLwlTSuYn5lYba7A"></script>
+<script src="//maps.google.com/maps?file=api&v=3&key="></script>

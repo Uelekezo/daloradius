@@ -160,8 +160,8 @@ function get_memory() {
     $mem_array = array();
 
     $buffer = file($file_name);
-
-    while (list($key, $value) = each($buffer)) {
+foreach ($buffer as $key => $value) {
+    //while (list($key, $value) = each($buffer)) {
         if (strpos($value, ':') !== false) {
             $match_line = explode(':', $value);
             $match_value = explode(' ', trim($match_line[1]));

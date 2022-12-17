@@ -22,5 +22,12 @@ DALO_DIR="/var/www/daloradius/contrib/scripts"
 # Clean Stale Sessions, run every minute
 * * * * * /usr/bin/php $DALO_DIR/maintenance/cleanStaleSessions.php 2>&1 >/dev/null
 
+#Clean Broadcast chilli MACs i.e 0,0,0,0 run every minute
+* * * * * /usr/bin/php $DALO_DIR/maintenance/chilli/CleanBroadcastMACs.php 2>&1 >/dev/null
+
+
+# Restore chilli Sessions that were prematurely Terminated due to a NAS-Reboot and not due to Session-Timeout','User-Request','Admin-Reset' # run every minute
+* * * * * /usr/bin/php $DALO_DIR/maintenance/chilli/RestorePreviousActiveSessionsAfterNAS-Reboot.php 2>&1 >/dev/null
+
 # Monitor Nodes, run every 15 minutes
 #/15 * * * * /usr/bin/php $DALO_DIR/maintenance/monitorNodes.php 2>&1 >/dev/null
