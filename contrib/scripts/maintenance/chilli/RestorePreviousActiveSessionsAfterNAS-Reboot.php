@@ -12,7 +12,7 @@
  echo "</pre>";
 
  # GET ALL UNCLOSED SESSIONS FROM DATABASE THAT MATCH THE CURRENTLY CONNECTED DEVICES WITHOUT LOGIN
- $link = mysqli_connect("127.0.0.1", "radius", "radpass", "radius");
+ $link = mysqli_connect("127.0.0.1", "cheserem", "  m", "radius");
  // Below query returns the client device mac_address and the username for a session that had an acctterminatecause of "NAS-Reboot"
 
  #$query = "SELECT any_value(radcheck.value) as UserPassword,radacct.CallingStationId,any_value(radacct.username) as UserName, any_value(radacct.framedipaddress) as FramedIpAddress,any_value(radacct.acctstoptime) as AcctStopTime,any_value(acctterminatecause) as acctterminatecause FROM radius.radacct INNER JOIN radcheck ON radcheck.username = radacct.username WHERE radacct.UserName != 'admin' and radcheck.attribute = 'Cleartext-Password' and month(AcctStopTime) = month(now()) and acctterminatecause = 'NAS-Reboot' and radacct.nas_session_restored is null and radacct.CallingStationId in ('".implode("','",$macs_connected)."')  Group BY radacct.CallingStationId";

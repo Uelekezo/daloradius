@@ -39,7 +39,7 @@ if (!array_key_exists('daloradius_logged_in', $_SESSION) || $_SESSION['daloradiu
 
     // implement a sort of "dynamic redirect finder" based on the number of "/" in the PHP_SELF value
     $count = substr_count($_SERVER['PHP_SELF'], "/", 1);
-    $location = str_repeat("../", $count) . "login.php";
+    $location = str_repeat("../daloradius/", $count) . "login.php";
 
     header("Location: " . $location);
     exit;

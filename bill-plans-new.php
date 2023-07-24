@@ -67,7 +67,7 @@
                 $currBy = $_SESSION['operator_user'];
 
                 $sql = "INSERT INTO ".$configValues['CONFIG_DB_TBL_DALOBILLINGPLANS'].
-                " (id, planName, planId, planType, planTimeBank, planTimeType, planTimeRefillCost, planBandwidthUp, planBandwidthDown, ".
+                " (bp_id, planName, planId, planType, planTimeBank, planTimeType, planTimeRefillCost, planBandwidthUp, planBandwidthDown, ".
                 " planTrafficTotal, planTrafficUp, planTrafficDown, planTrafficRefillCost, planRecurring, planRecurringPeriod, ".
                 " planRecurringBillingSchedule, planCost, planSetupCost, planTax, planCurrency, planGroup, ".
                 "  creationdate, creationby, updatedate, updateby) ".
